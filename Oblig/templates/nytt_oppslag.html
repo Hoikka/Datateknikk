@@ -1,0 +1,47 @@
+<!-- Kode hentet fra forelesning -->
+
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <h3>Nytt oppslag</h3>
+    <form action="{{url_for('update')}}" method="post">
+        <div>
+            {{ form.tittel.label }}
+            {{ form.tittel(size=32) }}<br>
+            {% for error in form.tittel.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.ingress.label }}
+            {{ form.ingress(size=32) }}<br>
+            {% for error in form.ingress.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.oppslagstekst.label }}
+            {{form.oppslagstekst(size=64)}}
+            {% for error in form.oppslagstekst.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.kategori.label }}
+            {{form.kategori}}
+            {% for error in form.kategori.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.bruker.label }}
+            {{form.bruker}}
+            {% for error in form.bruker.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock %}

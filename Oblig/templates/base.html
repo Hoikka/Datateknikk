@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/stilark.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppslagstavle</title>
+</head>
+
+<body>
+    <h1>Oppslagstavle</h1>
+    <div class="sidenav">
+        <ul>
+            <li><a class="active" href="/?kategori=hjem">Hjem</a></li>
+            <li><a href="/?kategori=bil">Bil</a></li>
+            <li><a href="/?kategori=motorsykkel">Motorsykkel</a></li>
+            <li><a href="/?kategori=båt">Båt</a></li>
+            <li><a href="/?kategori=fly">Fly</a></li>
+            <li><a href="/?kategori=diverse">Diverse</a></li>
+            <li><a href="/nytt_oppslag">Nytt oppslag</a></li>
+        </ul>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>
+
+</html>

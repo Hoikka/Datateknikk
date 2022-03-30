@@ -1,0 +1,17 @@
+body {
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.9em;
+    margin-left: 10%;
+    margin-top:5%;
+  }
+  
+  .boks1{
+     float:left;
+     margin-left: 10%;
+  }
+  
+  .boks2{
+      margin: 1%;
+      padding: 5%;
+      float:left;
+    }

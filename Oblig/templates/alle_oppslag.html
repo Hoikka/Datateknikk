@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% for oppslag in alle_oppslag %}
+<div class="oppslag">
+    <td><a href="?id={{ oppslag.id  }}">{{ oppslag.tittel }}</a></td>
+    <td>Ingress: {{oppslag.ingress }}</td><br>
+    <td>{{ oppslag.dato }}</td>
+    <td>Treff: {{ oppslag.treff }}</td>
+</div>
+{% endfor %}
+
+{% endblock %}

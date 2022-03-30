@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="oppslag">
+    <td>
+        <h3>{{ oppslag.tittel }}</h3>
+    </td>
+    <td>{{ oppslag.ingress }}</td><br>
+    <td>{{ oppslag.oppslagstekst }}</td><br>
+    <td>Bruker: {{ oppslag.bruker }}</td><br>
+    <td>Dato: {{ oppslag.dato }}</td><br>
+    <td>Antall visninger: {{ oppslag.treff }}</td><br>
+    <a href="/update?id={{ oppslag.id }}"><button class="btn btn-primary">Update</button></a>
+    <a href="/delete_confirm?id={{ oppslag.id }}"><button class="btn btn-primary">Delete</button></a>
+</div>
+
+
+
+{% endblock %}
